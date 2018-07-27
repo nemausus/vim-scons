@@ -19,10 +19,12 @@ Reload ```.vimrc``` and ```:PlugInstall``` to install the plugin.
 ## Usage
 Plugin adds following keyboard mappings
 
+```
 <leader>sd Compile current file in debug mode.
 <leader>so Compile current file in opt mode.
 <leader>st Run current test.
 <leader>sa Run all tests from current file.
+```
 
 If you want to define your own custom mappings these can disabled by
 
