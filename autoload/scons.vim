@@ -5,16 +5,16 @@ function! scons#run(cmd)
   execute "normal \<C-w>\<C-w>"
 endfunction
 
-function scons#dbg()
+function! scons#dbg()
   call scons#run('mode=dbg %:h:%:t:r')
 endfunction
 
-function scons#opt()
+function! scons#opt()
   call scons#run('mode=opt %:h:%:t:r')
 endfunction
 
 function! scons#testall()
-  let cmd='runtests=default %:h:%:t:r'
+  let cmd='runtests=default '.expand('%:h').':'.expand('%:t:r')
   let suffix=strpart(cmd, strlen(cmd) - 4)
   if suffix != "test"
     let cmd=cmd.'_test'
