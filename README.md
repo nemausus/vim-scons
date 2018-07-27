@@ -23,7 +23,8 @@ Plugin adds following keyboard mappings
 <leader>sd Compile current file in debug mode.
 <leader>so Compile current file in opt mode.
 <leader>st Run current test.
-<leader>sa Run all tests from current file.
+<leader>sa Run all tests from current file or if current file is not a test file 
+           append _test to current target.
 ```
 
 If you want to define your own custom mappings these can disabled by
