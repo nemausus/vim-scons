@@ -1,6 +1,10 @@
 " Author : Naresh (nareshkumargangwar@gmail.com)
 
 function! scons#run(cmd)
+  let pos = win_screenpos(winnr())
+  if pos[0] != 1
+    execute "normal!  \<C-w>\<C-k>\<C-w>q"
+  endif
   execute 'term scons -j20 '.a:cmd
   execute "normal \<C-w>\<C-w>"
 endfunction
